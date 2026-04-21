@@ -613,12 +613,7 @@
       return entries.length ? entries[entries.length - 1] : null;
     }
 
-    function setDefaultDateFromLastEntry(entries = loadEntries()) {
-      const lastEntry = getLastEntry(entries);
-      if (lastEntry) {
-        dateInput.value = toDatetimeLocalValue(lastEntry.datetime);
-        return;
-      }
+    function setDefaultDateFromLastEntry() {
       dateInput.value = formatLocalDatetime(new Date());
     }
 
